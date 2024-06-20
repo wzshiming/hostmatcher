@@ -50,7 +50,8 @@ func (p pathPatternMatcher) match(path string) bool {
 		case path[pathIndex]:
 			pathIndex++
 			patternIndex++
-			continue
+		default:
+			return false
 		}
 	}
 
